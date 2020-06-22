@@ -96,8 +96,8 @@ function drawStripChart(category) {
       .style("stroke", "#00A2D7")
       .attr("cx", d => d.x)
       .attr("cy", d => d.y)
-      .on("mouseover", d => handleMouseOver(d))
-      .on("mouseout", d => handleMouseOut(d))
+      .on("mouseover", handleMouseOver)
+      .on("mouseout", handleMouseOut)
       
 
   // draw peripherals
@@ -127,6 +127,13 @@ function drawStripChart(category) {
 
   // tooltip function
   function handleMouseOver(d){
+    const selectedCircle = d3.select(this)
+    selectedCircle
+      .attr("fill", "rgba(247, 113, 125, 0.7)")
+      .style("stroke", "#FF97A8")
+      .style("stroke-width", 4)
+
+    // show information
     selectInfo
       .style("opacity", 1);
     const infoID = selectInfo.nodes()[0]
@@ -136,6 +143,11 @@ function drawStripChart(category) {
   }
 
   function handleMouseOut(d){
+    const selectedCircle = d3.select(this)
+    selectedCircle
+      .attr("fill", "rgba(0, 162, 215, 0.7)")
+      .style("stroke", "#00A2D7")
+      .style("stroke-width", 1)
   }
 }
 
