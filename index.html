@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>special material interactive strip chart</title>
+   <!-- external source -->
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+
+   <!-- internal source -->
+   <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+  <span class="select-title">類別選擇：</span>
+  <select id="cat-select">
+    <option value="人工髖關節">人工髖關節</option>
+    <option value="人工水晶體">人工水晶體</option>
+    <option value="人工心律調節器">人工心律調節器</option>
+    <option value="冠狀動脈塗藥支架">冠狀動脈塗藥支架</option>
+    <option value="生物組織心臟瓣膜">生物組織心臟瓣膜</option>
+    <option value="調控式腦室腹腔引流系統">調控式腦室腹腔引流系統</option>
+    <option value="治療淺股動脈狹窄之塗藥裝置">治療淺股動脈狹窄之塗藥裝置</option>
+    <option selected value="治療複雜性心臟不整脈消融導管">治療複雜性心臟不整脈消融導管</option>
+  </select>
+  <div id="wrapper"></div>
+  <div id="chart-footer"></div>
+  <div class="selected-info">
+    <span id="sm-id">品項代碼：wdwdwdwdwd</span>
+    <br>
+    <span id="sm-diff">價差倍數：8</span>
+  </div>
+  <footer class="grid">
+    <div class="foot-note">
+      <p>資料來源：健保署自費醫材比價網</p>
+      <p>資料更新日期：2020/6/20</p>
+      <p>製圖者：Steven Yeo</p>
+    </div>
+    <img class="TNL-logo" src="./TNLlogo.svg" alt="">
+  </footer>
+  <script src='./sizeDetect.js'></script>
+  <script src='./chart.js'></script>
+  <script src='./selector.js'></script>
+</body>
+</html>
